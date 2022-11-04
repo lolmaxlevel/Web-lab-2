@@ -27,7 +27,7 @@
             </div>
 
             <div class="image-container">
-                <canvas height="200" width="200" id="graph"> </canvas>
+                <canvas height="300" width="300" id="graph"> </canvas>
             </div>
         </td>
         <!-- Table -->
@@ -101,9 +101,15 @@
                         <td class="input-grid-label">
                             <label for="r-text-input"> R:</label>
                         </td>
-                        <td class="input-grid-value">
-                            <input class="text-input" id="r-text-input" type="text" name="rval" maxlength="10"
-                                   autocomplete="off" placeholder="Number from 1 to 4...">
+                        <td class="input-grid-value" >
+                            <select class="text-input" id="r-text-input" form="input-form">
+                                <option value="0" selected disabled hidden>Выберите значение R</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -138,6 +144,7 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./src/js/main.js" type="text/javascript"></script>
+<script src="./src/js/graph.js" type="text/javascript"></script>
 </body>
 
 </html>

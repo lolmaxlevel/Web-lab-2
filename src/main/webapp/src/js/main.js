@@ -99,13 +99,3 @@ $('#input-form').on('submit', function(event) {
     sendRequest(data);
 });
 
-var example = document.getElementById("graph"), ctx = example.getContext('2d');
-ctx.beginPath();
-ctx.moveTo(40, 140);
-ctx.lineTo(20, 40);
-ctx.lineTo(60, 100);
-ctx.lineTo(80, 20);
-ctx.lineTo(100, 100);
-ctx.lineTo(140, 40);
-ctx.lineTo(120, 140);
-ctx.stroke(); // *22
