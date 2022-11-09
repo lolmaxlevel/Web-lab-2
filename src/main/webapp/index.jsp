@@ -31,24 +31,6 @@
             </div>
         </td>
         <!-- Table -->
-        <td class="content-plate" id="table-plate" rowspan="2">
-            <div class="plate-top">
-                <h2 class="plate-top-title">Результат</h2>
-            </div>
-
-            <div class="scroll-container">
-                <table id="result-table">
-                    <tr class="table-header">
-                        <th class="coords-col">X</th>
-                        <th class="coords-col">Y</th>
-                        <th class="coords-col">R</th>
-                        <th class="time-col">Время</th>
-                        <th class="time-col">Время выполнения</th>
-                        <th class="hitres-col">Результат</th>
-                    </tr>
-                </table>
-            </div>
-        </td>
     </tr>
 
     <tr>
@@ -67,15 +49,21 @@
                         </td>
 
                         <td class="input-grid-value x-radio-group">
-                            <label><input class="x-radio" type="radio" name="xval" value="-2" />-2</label>
-                            <label><input class="x-radio" type="radio" name="xval" value="-1.5" />-1.5</label>
-                            <label><input class="x-radio" type="radio" name="xval" value="-1" />-1</label>
-                            <label><input class="x-radio" type="radio" name="xval" value="-0.5" />-0.5</label>
-                            <label><input class="x-radio" type="radio" name="xval" value="0" checked="checked"/>0</label>
-                            <label><input class="x-radio" type="radio" name="xval" value="0.5" />0.5</label>
-                            <label><input class="x-radio" type="radio" name="xval" value="1" />1</label>
-                            <label><input class="x-radio" type="radio" name="xval" value="1.5" />1.5</label>
-                            <label><input class="x-radio" type="radio" name="xval" value="2" />2</label>
+                            <label><input class="x-cb" type="checkbox" name="xval" value="-2" >-2</label>
+                            <label><input class="x-cb" type="checkbox" name="xval" value="-1.5" />-1.5</label>
+                            <label><input class="x-cb" type="checkbox" name="xval" value="-1" />-1</label>
+                            <label><input class="x-cb" type="checkbox" name="xval" value="-0.5" />-0.5</label>
+                            <label><input class="x-cb" type="checkbox" name="xval" value="0" checked="checked"/>0</label>
+                            <label><input class="x-cb" type="checkbox" name="xval" value="0.5" />0.5</label>
+                            <label><input class="x-cb" type="checkbox" name="xval" value="1" />1</label>
+                            <label><input class="x-cb" type="checkbox" name="xval" value="1.5" />1.5</label>
+                            <label><input class="x-cb" type="checkbox" name="xval" value="2" />2</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="x-error-box">Пожалуйста выберите X</div>
                         </td>
                     </tr>
 
@@ -99,10 +87,10 @@
                     <!-- R Value -->
                     <tr>
                         <td class="input-grid-label">
-                            <label for="r-text-input"> R:</label>
+                            <label for="r-select"> R:</label>
                         </td>
                         <td class="input-grid-value" >
-                            <select class="text-input" id="r-text-input" form="input-form">
+                            <select class="text-input" id="r-select" name="rval" form="input-form">
                                 <option value="0" selected disabled hidden>Выберите значение R</option>
                                 <option value="1">1</option>
                                 <option value="1.5">1.5</option>
@@ -128,20 +116,12 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td colspan="2">
-                            <div>
-                                <input class="specialCB" type="checkbox" id="experimental" name="123">
-                                <label for="experimental">Use experimental hit check (uses color under cursor)</label>
-                            </div>
-                        </td>
-                    </tr>
                 </table>
             </form>
         </td>
     </tr>
 </table>
-
+<div hidden><jsp:include page="results.jsp"/></div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./src/js/main.js" type="text/javascript"></script>
 <script src="./src/js/graph.js" type="text/javascript"></script>
