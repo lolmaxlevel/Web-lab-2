@@ -7,7 +7,7 @@
     <link rel="icon" href="./src/img/icon.jpg">
     <link rel="stylesheet" type="text/css" href="./src/css/style.css">
 
-    <title>Web #1</title>
+    <title>Web #2</title>
 </head>
 <body>
 <table id="main-grid">
@@ -15,7 +15,7 @@
         <!-- Header -->
         <td id="header-plate" colspan="2">
             <span class="left-aligned">Терновский Илья (P32302)</span>
-            <span class="right-aligned">Вариант 3317</span>
+            <span class="right-aligned">Вариант 32456</span>
         </td>
     </tr>
 
