@@ -12,17 +12,15 @@ import static com.lolmaxlevel.weblab2.misc.CheckIfHit.*;
 
 @WebServlet(name = "AreaCheckServlet", value = "/check")
 public class AreaCheckServlet extends HttpServlet {
-
+    ArrayList<Result> results;
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
             Double x = (Double)request.getAttribute("x");
             Double y = (Double)request.getAttribute("y");
             Double r = (Double)request.getAttribute("r");
             Double timezone = (Double) request.getAttribute("timezone");
             boolean isHit = isHit(x, y, r);
-
-            ArrayList<Result> results;
 
             if (getServletContext().getAttribute("results") == null){
                 results = new ArrayList<>();
