@@ -38,7 +38,7 @@
                         append(String.format("%.1f", result.getR()).replace(",", ".")).append("</td>");
                 newRow.append("<td>").append(result.getTime().getHour()).append(":").append(result.getTime().getMinute()).
                         append(":").append(result.getTime().getSecond()).append("</td>");
-                newRow.append("<td>").append(result.getExec_time()).append("</td>");
+                newRow.append("<td>").append(result.getExecTime()).append("</td>");
                 String color = result.isHit() ? "green" : "red";
                 newRow.append("<td class = 'hit'>" + "<span class=").
                         append(color).append(">").append(result.isHit()).append("</span>").append("</td>"); %>

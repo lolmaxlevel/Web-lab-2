@@ -15,21 +15,21 @@ public class ParseData {
         }
     }
     public static Double parseX(String x) throws WrongDataException {
-        double normal_x = parseDoubleFromStr(x);
+        double parsedX = parseDoubleFromStr(x);
 
-        if(normal_x<-4 || normal_x > 4) throw new WrongDataException("x is out of range");
-        else return normal_x;
+        if(parsedX<-4 || parsedX > 4) throw new WrongDataException("x is out of range");
+        else return parsedX;
     }
     public static Double parseY(String y) throws WrongDataException {
-        double normal_y = parseDoubleFromStr(y);
+        double parsedY = parseDoubleFromStr(y);
 
-        if(normal_y < yMin || normal_y > yMax) throw new WrongDataException("y is out of range");
-        else return normal_y;
+        if(parsedY < yMin || parsedY > yMax) throw new WrongDataException("y is out of range");
+        else return parsedY;
     }
     public static Double parseR(String r) throws WrongDataException {
-        double normal_r = parseDoubleFromStr(r);
+        double parsedR = parseDoubleFromStr(r);
 
-        if(!possibleR.contains(normal_r)) throw new WrongDataException("r is out of range");
-        else return normal_r;
+        if(!possibleR.contains(parsedR)) throw new WrongDataException("r is out of range");
+        else return parsedR;
     }
 }

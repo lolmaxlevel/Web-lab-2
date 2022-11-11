@@ -16,10 +16,6 @@ public class AreaCheckServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
-            if (request.getAttribute("error") != null){
-                request.getRequestDispatcher("error.jsp").forward(request, response);
-            }
-
             Double x = (Double)request.getAttribute("x");
             Double y = (Double)request.getAttribute("y");
             Double r = (Double)request.getAttribute("r");

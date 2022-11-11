@@ -11,6 +11,9 @@ import jakarta.servlet.annotation.*;
 public class ControllerServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        if (request.getAttribute("error") != null){
+            request.getRequestDispatcher("error.jsp").forward(request, response);
+        }
         if (request.getParameter("xval") != null && request.getParameter("yval") != null && request.getParameter("rval") != null){
             getServletContext().getNamedDispatcher("AreaCheckServlet").forward(request, response);
         }
