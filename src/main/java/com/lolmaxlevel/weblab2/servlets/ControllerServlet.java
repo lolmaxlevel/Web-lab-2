@@ -21,7 +21,8 @@ public class ControllerServlet extends HttpServlet {
             getServletContext().getNamedDispatcher("ClearDataServlet").forward(request, response);
         }
         else {
-            response.sendError(400, "bad request");
+            request.setAttribute("error", "not found");
+            request.getRequestDispatcher("error.jsp").forward(request, response);
         }
     }
 

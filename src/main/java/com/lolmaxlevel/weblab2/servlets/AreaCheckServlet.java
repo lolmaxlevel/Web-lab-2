@@ -3,7 +3,6 @@ package com.lolmaxlevel.weblab2.servlets;
 import java.io.*;
 import java.util.ArrayList;
 import com.lolmaxlevel.weblab2.misc.Result;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
